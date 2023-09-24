@@ -1,252 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <script src="https://kit.fontawesome.com/fe6ab788af.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
-
-    <link rel="stylesheet" href="demo.css" />
-    <link rel="stylesheet" href="card hover.css">
-
-    <style>
-        #about {
-            background-color: var(--sectionBgColor);
-        }
-
-
-        #our-services {
-            background-color: var(--sectionBgColor);
-        }
-
-        #gallery {
-            background-color: var(--sectionBgColor);
-        }
-
-        #contact {
-            background-color: var(--sectionBgColor);
-        }
-
-        #loading {
-            position: fixed;
-            width: 100%;
-            height: 100vh;
-            background: #fff url('Images/Spinner-2.gif') no-repeat center center;
-            z-index: 99999;
-        }
-
-        #page-top {
-            overflow: hidden;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Web Page</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-
-
-
-<body onload="myFunction()">
-
-    <div id="loading"></div>
-    <!-- Loader END -->
-    <!-- home page START -->
-    <div class="container-fluid head-main-container overflow-hidden" id="page-top">
+<body>
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-md-12">
-                <div class="row row-header">
-                    <div class="col-12 ">
-                        <!-- nav bar -->
-                        <nav class="navbar navbar-expand-lg navbar-light bg-transparent" id="main-nav">
-                            <a class="navbar-brand js-scroll-trigger  animate__backInDown" href="#page-top" id="logo">
-                                NTLOGIX
-                            </a>
-                            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbar-collapse" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button> -->
-                            <label for="check" class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbar-collapse" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <input type="checkbox" id="check" />
-                                <span class="first"></span>
-                                <span></span>
-                                <span></span>
-                            </label>
-
-
-                            <div class="collapse navbar-collapse" id="navbar-collapse">
-                                <ul class="navbar-nav ml-auto" id="navbar-nav">
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="about-us-page.html">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="our-services.html">Services</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="gallery.html">Gallery</a>
-
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="team-card.html">Our
-                                            team </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="contact.html">Contact
-                                            Us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="" data-toggle="modal" data-target="#exampleModal">
-                                            login
-
-                                        </a>
-                                    </li>
-
-                                </ul>
-
-                            </div>
-                        </nav>
-                        <!-- navbar  end -->
-
-                        <!-- MODAL START -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Login Here</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-
-                                            <div class="col-lg-4 mr-auto text-center">
-                                                <i class="fas fa-link fa-3x mb-3 text-success"></i>
-                                                <!-- Make sure to change the email address in BOTH the anchor text and the link target below!--><a
-                                                    class="d-block" href="http://1.186.217.119/">Staff Login</a>
-                                            </div>
-                                            <div class="col-lg-4 mr-auto text-center">
-                                                <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                                                <!-- Make sure to change the email address in BOTH the anchor text and the link target below!--><a
-                                                    class="d-block" href="https://ntlogix.in:2096/">WebMail
-                                                    Login</a>
-                                            </div>
-                                            <div class="col-lg-4 mr-auto text-center">
-                                                <i class="fas fa-file fa-3x mb-3 text-danger"></i>
-                                                <!-- Make sure to change the email address in BOTH the anchor text and the link target below!--><a
-                                                    class="d-block" href="https://software.ntlogix.in/">Downloads</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal end -->
-                    </div>
+            <div class="col-md-6 offset-md-3">
+                <div class="form-group">
+                    <label for="inputField">Paste Code Here:</label>
+                    <input type="text" class="form-control" id="inputField" onkeypress="change()">
                 </div>
+                <button class="btn btn-primary" id="claimButton" disabled>Claim</button>
             </div>
-
-
-
-            <!-- MAIN HEading  -->
-            <div class="container-fluid main-masthead py-20 bg-bg-3" id="main-head">
-                <div class="row row-masthead">
-                    <!-- <div class="container-fluid">
-                <div class="row"> -->
-                    <div class="col-md-12">
-
-                        <!-- RIGHT Content -->
-                        <!-- Header 1 -->
-                        <div class="row align-items-center flex-md-row-reverse">
-                            <div class="col-md-6" id="animation-container">
-                                <div id="animContainer"> </div>
-                            </div>
-
-                            <div class="col-md-6 mt-8 mt-md-0 " id="left-content">
-                                <h1 id="welcome-head-digital">Digital World...</h1>
-                                <h1 class="display-4 mb-6" id="welcome-head-text">
-                                    We Provide Best IT Services For your Need.
-                                </h1>
-                                <p class="mb-8 fs-1 mb-4" id="welcome-sub-text">
-                                    Meet your new sidekick. The powerful tool that helps you create
-                                    something special.
-                                </p>
-                                <div class="btn-box">
-                                    <button href="#" class="" id="welcome-action-btn" data-aos="fade-down"
-                                        data-aos-delay="400">
-                                        Explore Design
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- MAIN HEading  END=== -->
-
-
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Title</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    This is a modal content.
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="openModalButton">Open</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js'></script>
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-        let tl = gsap.timeline();
-        tl.from("#page-top", {
-            opacity: 0
+
+        // Function to generate a random delay between 1 and 5 seconds
+        function getRandomDelay() {
+            return Math.floor(Math.random() * 4000) + 1000; // Random delay between 1000ms and 5000ms (1-5 seconds)
+        }
+
+        // Function to check if there are characters in the input field
+        function isInputFieldEmpty() {
+            return document.getElementById('inputField').value.trim() === '';
+
+        }
+
+        // Function to enable or disable the "Claim" button based on input field content
+        function toggleClaimButton() {
+            document.getElementById('claimButton').disabled = isInputFieldEmpty();
+        }
+
+        // Handle the input field's input event
+        document.getElementById('inputField').addEventListener('input', function () {
+            // Toggle the "Claim" button based on input field content
+
+            toggleClaimButton();
         });
 
-        // preloader start
-        var preloader = document.getElementById("loading");
-        // window.addEventListener('load', function(){
-        // 	preloader.style.display = 'none';
-        // 	})
+        // Handle the claim button click event
+        document.getElementById('claimButton').addEventListener('click', function () {
+            // Generate a random delay
+            var randomDelay = getRandomDelay();
 
-        function myFunction() {
-            preloader.style.display = 'none';
-        };
-        //preloader === END ===
-
-        //SVG Animation
-        let animation = bodymovin.loadAnimation({
-            container: document.getElementById('animContainer'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: 'https://assets4.lottiefiles.com/packages/lf20_uz6N3A.json'
-            // lottie file path
+            // Set a timeout to show the modal after the random delay
+            setTimeout(function () {
+                // Show the modal
+                $('#myModal').modal('show');
+            }, randomDelay);
         });
-        //Svg animation === END ===
+
+        // Handle the open modal button click event
+        document.getElementById('openModalButton').addEventListener('click', function () {
+            // Generate a random delay
+            var randomDelay = getRandomDelay();
+
+            // Set a timeout to change opacity to zero after the random delay
+            setTimeout(function () {
+                // Change the opacity of the "Open" button to zero
+                $('#openModalButton').css('opacity', '0');
+            }, randomDelay);
+        });
+
+        // Handle the modal close event
+        $('#myModal').on('hidden.bs.modal', function () {
+            // Reset the opacity of the "Open" button to 1 when the modal is closed
+            $('#openModalButton').css('opacity', '1');
+        });
     </script>
-
-
 </body>
-
 </html>
